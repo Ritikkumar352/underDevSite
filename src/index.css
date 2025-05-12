@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 100% 94%;
+    --foreground: 240 10% 4%;
+
+    --card: 60 33% 98%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 60 33% 98%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 270 95% 65%;
+    --primary-foreground: 60 33% 98%;
+
+    --secondary: 180 99% 47%;
+    --secondary-foreground: 240 10% 4%;
+
+    --muted: 60 11% 90%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 180 75% 60%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 60 33% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 270 95% 65%;
+
+    --radius: 0.5rem;
+    
+    --terminal-bg: #FFDE5A;
+    --terminal-text: #121212;
+    --terminal-border: #8B5CF6;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 60 33% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 60 33% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 60 33% 98%;
+
+    --primary: 270 95% 65%;
+    --primary-foreground: 60 33% 98%;
+
+    --secondary: 180 99% 47%;
+    --secondary-foreground: 240 10% 4%;
+
+    --muted: 240 6% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 180 75% 45%;
+    --accent-foreground: 60 33% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 60 33% 98%;
+
+    --border: 240 6% 16%;
+    --input: 240 6% 16%;
+    --ring: 270 95% 65%;
+    
+    --terminal-bg: #121212;
+    --terminal-text: #FFDE5A;
+    --terminal-border: #01EDD5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-space-mono;
+  }
+}
+
+@layer components {
+  .retro-container {
+    @apply relative px-4 md:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+  
+  .retro-terminal {
+    @apply font-vt323 border-2 rounded p-4 md:p-6 relative overflow-hidden;
+    background-color: var(--terminal-bg);
+    color: var(--terminal-text);
+    border-color: var(--terminal-border);
+    box-shadow: 0.5rem 0.5rem 0 var(--terminal-border);
+  }
+
+  .retro-terminal::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 h-1 bg-retro-teal z-10;
+  }
+  
+  .scanline {
+    @apply pointer-events-none absolute inset-0 z-10 h-full w-full opacity-10;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 51%);
+    background-size: 100% 4px;
+  }
+  
+  .pixel-corners {
+    clip-path: 
+      polygon(
+        0 0.5rem, 0.5rem 0.5rem, 0.5rem 0, 
+        calc(100% - 0.5rem) 0, calc(100% - 0.5rem) 0.5rem, 100% 0.5rem, 
+        100% calc(100% - 0.5rem), calc(100% - 0.5rem) calc(100% - 0.5rem), 
+        calc(100% - 0.5rem) 100%, 0.5rem 100%, 0.5rem calc(100% - 0.5rem), 
+        0 calc(100% - 0.5rem)
+      );
+  }
+  
+  .retro-card {
+    @apply bg-card border-2 rounded relative overflow-hidden hover:scale-[1.02] transition-all duration-300 shadow-lg;
+    border-color: var(--terminal-border);
+  }
+  
+  .retro-card::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 h-1 bg-retro-teal z-10;
+  }
+
+  .typing-animation {
+    @apply overflow-hidden whitespace-nowrap border-r-4 border-retro-purple;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  }
+
+  .retro-header {
+    @apply font-press-start text-xl sm:text-2xl md:text-3xl mb-6;
+    text-shadow: 2px 2px 0px var(--terminal-border);
+  }
+  
+  .retro-texture {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat;
+    position: relative;
+  }
+
+  .dark .retro-texture {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23FFFFFF' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--terminal-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Media query for reduced animation */
+@media (prefers-reduced-motion: reduce) {
+  .scanline,
+  .typing-animation,
+  .animate-scanline,
+  .animate-cursor-blink {
+    animation: none !important;
+  }
+}

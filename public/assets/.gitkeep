@@ -1,0 +1,7 @@
+
+# This directory is for your assets
+
+Place your images in the following directories:
+- `/assets/` - For your profile photo and general images
+- `/assets/projects/` - For project thumbnails and screenshots
+- `/assets/team/` - For team member photos
