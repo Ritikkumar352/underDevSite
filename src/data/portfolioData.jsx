@@ -351,9 +351,9 @@ export const projects = [
         photo: personalInfo.photo,
       },
       {
-        name: "Taylor Wilson",
-        role: "Frontend Developer",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+        name: "Sania Khan",
+        role: "Frontend Developer, UI Designer",
+        photo: "/assets/project-7/sania-face-srms.jpeg",
       },
     ],
     github: "https://github.com/alexjohnson/algo-trader-sim",
