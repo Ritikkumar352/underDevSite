@@ -1,0 +1,6 @@
+    Programming Languages: Java, C, JavaScript, TypeScript, Python, PHP, SQL
+    Backend: Spring Boot, Spring Security, Hibernate, REST APIs, Microservices, PHP
+    Frontend: React.js, TypeScript, Bootstrap, Tailwind CSS, Material-UI, HTML, CSS
+    Databases: MySQL, PostgreSQL, Redis
+    DevOps & Cloud: Docker, AWS, Google Cloud, Linux
+    Tools: GitHub, Git, Postman,FireBase, IntelliJ IDEA, VS Code

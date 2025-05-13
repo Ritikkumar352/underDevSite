@@ -4,15 +4,27 @@ import { skills } from '../data/portfolioData';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Code, Database, Terminal, FileCode, Monitor, Server, Laptop, Smartphone, Cog } from 'lucide-react';
 
+
+
 const SkillsPage = () => {
   const navigate = useNavigate();
   
+  // const skillCategories = {
+  //   "Programming Languages": skills.filter(s => ["Python", "JavaScript", "Java", "C++"].includes(s.name)),
+  //   "Web Technologies": skills.filter(s => ["React", "HTML/CSS", "Node.js", "Angular"].includes(s.name)),
+  //   "Data & ML": skills.filter(s => ["Machine Learning", "SQL", "Data Analysis", "TensorFlow"].includes(s.name)),
+  //   "Tools & Others": skills.filter(s => ["Git", "Docker", "AWS", "Linux"].includes(s.name))
+  // };
+
   const skillCategories = {
-    "Programming Languages": skills.filter(s => ["Python", "JavaScript", "Java", "C++"].includes(s.name)),
-    "Web Technologies": skills.filter(s => ["React", "HTML/CSS", "Node.js", "Angular"].includes(s.name)),
-    "Data & ML": skills.filter(s => ["Machine Learning", "SQL", "Data Analysis", "TensorFlow"].includes(s.name)),
-    "Tools & Others": skills.filter(s => ["Git", "Docker", "AWS", "Linux"].includes(s.name))
-  };
+  "Programming Languages": skills.filter(s => ["Java", "C", "JavaScript", "TypeScript", "Python", "PHP", "SQL"].includes(s.name)),
+  "Backend Technologies": skills.filter(s => ["Spring Boot", "Spring Security", "Hibernate", "REST APIs", "Microservices"].includes(s.name)),
+  "Frontend Technologies": skills.filter(s => ["React.js", "Bootstrap", "Tailwind CSS", "Material-UI", "HTML", "CSS"].includes(s.name)),
+  "Databases": skills.filter(s => ["MySQL", "PostgreSQL", "Redis"].includes(s.name)),
+  "DevOps & Cloud": skills.filter(s => ["Docker", "AWS", "Google Cloud", "Linux"].includes(s.name)),
+  "Tools & Others": skills.filter(s => ["GitHub", "Git", "Postman", "Firebase", "IntelliJ IDEA", "VS Code"].includes(s.name))
+};
+
 
   // Function to get appropriate icon for each skill
   const getSkillIcon = (skillName) => {
@@ -51,10 +63,15 @@ const SkillsPage = () => {
         return <Server {...iconProps} />;
       case 'linux':
         return <Terminal {...iconProps} />;
+      case 'google cloud':
+        return <Server {...iconProps} />;
       default:
         return <Cog {...iconProps} />;
     }
   };
+
+ 
+
 
   return (
     <Layout>

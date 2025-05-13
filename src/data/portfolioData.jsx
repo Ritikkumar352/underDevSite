@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "Ghaziabad, India",
   github: "https://github.com/ritikkumar352",
   linkedin: "https://www.linkedin.com/in/ritikkumar352",
-  photo: "/assets/PFP_Yellow.png",
+  photo: "/assets/Ritik-pfp.png",
   role: "Full Stack Developer",
   bio: [
     "Hi! I'm a third-year Computer Science student at ABES Engineering College, with a strong interest in software development and scalable web systems.",
@@ -37,161 +37,144 @@ export const education = [
 ];
 
 // TODO update a whole list of skills
+// export const skills = [
+//   { name: "Python", level: 90 },
+//   { name: "JavaScript", level: 85 },
+//   { name: "React", level: 80 },
+//   { name: "Java", level: 75 },
+//   { name: "C++", level: 70 },
+//   { name: "Machine Learning", level: 65 },
+//   { name: "SQL", level: 75 },
+//   { name: "Git", level: 80 },
+// ];
+
 export const skills = [
-  { name: "Python", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Java", level: 75 },
-  { name: "C++", level: 70 },
-  { name: "Machine Learning", level: 65 },
+  { name: "Java", level: 90 },
+  { name: "C", level: 85 },
+  { name: "JavaScript", level: 80 },
+  { name: "TypeScript", level: 75 },
+  { name: "Python", level: 70 },
+  { name: "PHP", level: 65 },
   { name: "SQL", level: 75 },
+  { name: "Spring Boot", level: 85 },
+  { name: "Spring Security", level: 80 },
+  { name: "Hibernate", level: 75 },
+  { name: "REST APIs", level: 80 },
+  { name: "Microservices", level: 70 },
+  { name: "React.js", level: 85 },
+  { name: "Bootstrap", level: 75 },
+  { name: "Tailwind CSS", level: 80 },
+  { name: "Material-UI", level: 70 },
+  { name: "HTML", level: 85 },
+  { name: "CSS", level: 80 },
+  { name: "MySQL", level: 85 },
+  { name: "PostgreSQL", level: 80 },
+  { name: "Redis", level: 70 },
+  { name: "Docker", level: 80 },
+  { name: "AWS", level: 75 },
+  { name: "Google Cloud", level: 70 },
+  { name: "Linux", level: 75 },
+  { name: "GitHub", level: 85 },
   { name: "Git", level: 80 },
+  { name: "Postman", level: 80 },
+  { name: "Firebase", level: 70 },
+  { name: "IntelliJ IDEA", level: 75 },
+  { name: "VS Code", level: 80 },
 ];
+
+
+
+
+
 
 export const projects = [
   {
     id: 1,
     title: "AI-Powered mini CRM Platform",
     shortDescription:
-      "A machine learning application that helps students optimize their study schedule",
+      "A comprehensive CRM platform to manage customer relationships and data.",
     description: [
-      "Developed an intelligent study planner that uses machine learning to optimize study schedules based on individual learning patterns.",
-      "Implemented spaced repetition algorithms and personalized learning path recommendations.",
-      "Built a responsive web interface with real-time progress tracking and analytics dashboard.",
+      "Developed a web-based CRM application for managing customer information, communication, creating campaigns and analytics.",
+      "Integrated data visualization and reporting features to enhance customer interaction tracking.",
+      "Built a user-friendly UI with Admin Login using O-Auth 2 which is fast and secure."
     ],
     technologies: [
-      "Python",
-      "TensorFlow",
-      "Flask",
+      "Java",
+      "Spring Boot",
+      "MySQL",
       "React",
-      "MongoDB",
-      "Chart.js",
+      "Docker",
+      "Firebase",
+      "Spring Security",
+      "Google Cloud",
+      "AWS Amplify"
     ],
-    thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    thumbnail: "/assets/project-1/crm-login-page.png",
     images: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      "/assets/project-1/dashboard.png",
+      "/assets/project-1/segment.png",
+      "/assets/project-1/campaign.png",
+      "/assets/project-1/crm-login-page.png"
     ],
     architectureDiagrams: [
-      "https://images.unsplash.com/photo-1561736778-92e52a7769ef",
+      "/assets/project-1/Application-flow.jpeg",
+      
     ],
-    dbDiagrams: ["https://images.unsplash.com/photo-1544383835-bda2bc66a55d"],
+    dbDiagrams: [
+      "/assets/project-1/db-diagrma-code.png",
+      
+    ],
     isTeamProject: false,
     team: [
       {
         name: "Ritik",
         role: personalInfo.role,
-        photo: "/assets/PFP_Yellow.png",
+        photo: personalInfo.photo,
       },
       {
         name: "Priya Sharma",
         role: "UI/UX Designer",
         photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
       },
-      {
-        name: "Michael Lee",
-        role: "Backend Developer",
-        photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-      },
+  
     ],
     github: "https://github.com/Ritikkumar352/miniCrm",
     liveUrl: "https://main.d3pha96ypv251i.amplifyapp.com/",
   },
   {
     id: 2,
-    title: "Vid-vault cloud",
+    title: "Vid-vault [cloud]",
     shortDescription:
-      "Mobile-friendly app to help students navigate university campus",
+      "A cloud-based video management application.",
     description: [
-      "Created an interactive campus map application to help new students find buildings and services.",
-      "Implemented real-time location tracking, shortest path algorithms, and accessibility features.",
-      "Designed for both web and mobile use with responsive layouts and offline capabilities.",
+     "Built a video management system with cloud storage for easy uploading, streaming, deleting and downloading of videos.",
+      "Implemented secure video access and efficient file organization using metadata stored in PostgreSQL while the video file is on GCP Bucket.",
+      "Implemented same project using AWS S3 bucket and a simple React UI for the user."
     ],
     technologies: [
-      "JavaScript",
-      "React Native",
-      "Node.js",
-      "MongoDB",
-      "Google Maps API",
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "GCP Bucket",
+      "AWS S3",
+      "React",
     ],
-    thumbnail: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+    thumbnail: "assets/project-2/vidvault-home.png",
     images: [
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      "/assets/project-2/vidvault-home.png"
     ],
     architectureDiagrams: [
       "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
     ],
-    dbDiagrams: [],
+    dbDiagrams: [
+      "/assets/project-2/vidvault-home.png"
+    ],
     isTeamProject: false,
     team: [
       {
-        name: "Ritik",
+       name: "Ritik",
         role: personalInfo.role,
-        photo: "/assets/PFP_Yellow.png",
-      },
-    ],
-    github: "https://github.com/alexjohnson/campus-navigator",
-    liveUrl: "https://campus-navigator-demo.com",
-  },
-  {
-    id: 3,
-    title: "Campus Dock Ongoing**",
-    shortDescription: "Educational platform for learning financial algorithms",
-    description: [
-      "Built a simulator that allows students to implement and test trading algorithms without financial risk.",
-      "Developed a comprehensive data visualization system for analyzing algorithm performance.",
-      "Integrated historical market data and created realistic market scenarios for algorithm testing.",
-    ],
-    technologies: ["Python", "NumPy", "Pandas", "React", "D3.js", "Flask"],
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
-    images: [
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    ],
-    architectureDiagrams: [],
-    dbDiagrams: [],
-    isTeamProject: true,
-    team: [
-      {
-        name: "Ritik Kumar",
-        role: "Full Stack Developer",
-        photo: "public/assets/PFP_Yellow.png",
-      },
-      {
-        name: "Sayed Haneef",
-        role: "Backend Developer and Android Developer",
-        photo: "public/assets/2024-05-05 (7).png",
-      },
-    ],
-    github: "https://github.com/alexjohnson/algo-trader-sim",
-    liveUrl: "https://algo-trader-sim.com",
-  },
-  {
-    id: 4,
-    title: "Real Time Chat Application, Ongoing**",
-    shortDescription: "Educational platform for learning financial algorithms",
-    description: [
-      "Built a simulator that allows students to implement and test trading algorithms without financial risk.",
-      "Developed a comprehensive data visualization system for analyzing algorithm performance.",
-      "Integrated historical market data and created realistic market scenarios for algorithm testing.",
-    ],
-    technologies: ["Python", "NumPy", "Pandas", "React", "D3.js", "Flask"],
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
-    images: [
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    ],
-    architectureDiagrams: [],
-    dbDiagrams: [],
-    isTeamProject: true,
-    team: [
-      {
-        name: "Ritik",
-        role: personalInfo.role,
-        photo: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+        photo: personalInfo.photo,
       },
       {
         name: "Taylor Wilson",
@@ -199,27 +182,75 @@ export const projects = [
         photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
       },
     ],
+    github: "https://github.com/Ritikkumar352/VidVault",
+    liveUrl: "https://vidvault.me/",
+  },
+  {
+    id: 3,
+    title: "Campus Dock Ongoing**",
+    shortDescription: "A one-stop smart utility app for college students.",
+    description: [
+      "Facilitates campus-specific services including canteen menus, order tracking, and notifications.",
+      "Integrated UPI payment for streamlined transactions during peak hours.",
+      "Email-based authentication to filter canteen availability by college."
+    ],
+    technologies: [
+      "Kotlin",
+      "Spring Boot",
+      "PostgreSQL",
+      "Google Storage bucket",
+      "Firebase",
+      "TailwindCSS"
+    ],
+    thumbnail:  "/assets/project-3/archit-campus-dock.png",
+    images: [
+       "/assets/project-3/archit-campus-dock.png",
+    ],
+    architectureDiagrams: [
+      "/assets/project-3/archit-campus-dock.png",
+    ],
+    dbDiagrams: [],
+    isTeamProject: true,
+    team: [
+      {
+        name: "Ritik",
+        role: personalInfo.role,
+        photo: personalInfo.photo,
+      },
+      {
+        name: "Sayed Haneef",
+        role: "Backend Developer, Android Developer",
+        photo: "public/assets/2024-05-05 (7).png",
+      },
+    ],
+    // TODO add the link to the project
     github: "https://github.com/alexjohnson/algo-trader-sim",
     liveUrl: "https://algo-trader-sim.com",
   },
   {
-    id: 5,
-    title: "User Authentication System",
-    shortDescription: "Educational platform for learning financial algorithms",
+    id: 4,
+    title: "Real-Time Chat App, Ongoing**",
+    shortDescription: "A real-time messaging application with group and direct chat",
     description: [
-      "Built a simulator that allows students to implement and test trading algorithms without financial risk.",
-      "Developed a comprehensive data visualization system for analyzing algorithm performance.",
-      "Integrated historical market data and created realistic market scenarios for algorithm testing.",
+      "Implemented real-time chat using WebSockets for seamless communication.",
+      "Features include group creation, user authentication, and message persistence.",
+      "Integrated notifications for message updates and typing indicators."
+     ],
+    technologies: [
+      "React",
+      "Spring Boot",
+      "PostgreSQL",
+      "WebSockets",
+      "Docker"
     ],
-    technologies: ["Python", "NumPy", "Pandas", "React", "D3.js", "Flask"],
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    thumbnail: "/assets/under-dev.jpg",
     images: [
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     ],
     architectureDiagrams: [],
     dbDiagrams: [],
-    isTeamProject: true,
+    isTeamProject: false,
     team: [
       {
         name: "Ritik",
@@ -232,26 +263,66 @@ export const projects = [
         photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
       },
     ],
-    github: "https://github.com/alexjohnson/algo-trader-sim",
-    liveUrl: "https://algo-trader-sim.com",
+    // TODO add the live link to the project
+    github: "https://github.com/Ritikkumar352/ChatLive",
+    liveUrl: "",
   },
   {
-    id: 6,
-    title: "Youtube Bacckend Clone",
-    shortDescription: "Educational platform for learning financial algorithms",
+    id: 5,
+    title: "User Authentication System",
+    shortDescription: "Secure login and registration system and Sessions.",
     description: [
-      "Built a simulator that allows students to implement and test trading algorithms without financial risk.",
-      "Developed a comprehensive data visualization system for analyzing algorithm performance.",
-      "Integrated historical market data and created realistic market scenarios for algorithm testing.",
+     "Implemented secure user authentication with JWT and OAuth2.",
+      "Password hashing and role-based access management.",
+      "Integrated Google and email-based sign-in options." ],
+    technologies: [ 
+      "Java",
+      "Spring Boot",
+      "React",
+      "JWT",
+      "OAuth2"
     ],
-    technologies: ["Python", "NumPy", "Pandas", "React", "D3.js", "Flask"],
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    thumbnail:  "/assets/under-dev.jpg",
     images: [
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
     ],
     architectureDiagrams: [],
     dbDiagrams: [],
+    isTeamProject: false,
+    team: [
+      {
+        name: "Ritik",
+        role: personalInfo.role,
+        photo: personalInfo.photo,
+      },
+      {
+        name: "Taylor Wilson",
+        role: "Frontend Developer",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      },
+    ],
+    github: "https://github.com/Ritikkumar352/authentication_Spring-Boot",
+    liveUrl: "",
+  },
+  {
+    id: 6,
+    title: "Youtube Bacckend Clone",
+    shortDescription: "A full-featured backend for a YouTube-like platform, utilizing MERN stack and Cloudinary for video uploads.",
+    description: [
+      "Developed a scalable backend to handle video uploads, processing, and streaming.",
+      "Integrated Cloudinary for efficient video storage and delivery.",
+      "Implemented user authentication and video management using the MERN stack."
+  ],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Cloudinary"],
+    thumbnail:  "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png",
+    images: [
+      "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"
+    ],
+    architectureDiagrams: [],
+    dbDiagrams: [
+      "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"
+    ],
     isTeamProject: false,
     team: [
       {
@@ -271,20 +342,24 @@ export const projects = [
   {
     id: 7,
     title: "SRMS (Student Result Management System)",
-    shortDescription: "Educational platform for learning financial algorithms",
+    shortDescription: "A web-based system for managing student results, built with PHP and a modern web stack.",
     description: [
-      "Built a simulator that allows students to implement and test trading algorithms without financial risk.",
-      "Developed a comprehensive data visualization system for analyzing algorithm performance.",
-      "Integrated historical market data and created realistic market scenarios for algorithm testing.",
-    ],
-    technologies: ["Python", "NumPy", "Pandas", "React", "D3.js", "Flask"],
-    thumbnail: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+     "Developed a comprehensive platform for managing and displaying student results.",
+      "Implemented a secure and user-friendly interface using HTML, CSS, Bootstrap, and JavaScript.",
+      "Used PHP for backend processing and MySQL for data storage."
+   ],
+    technologies: ["PHP", "HTML", "CSS", "Bootstrap", "JavaScript", "MySQL"],
+    thumbnail:  "public/assets/project-7/srms-home.png",
     images: [
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      "/assets/project-7/home.png",
+      "/assets/project-7/register.png",
+      "/assets/project-7/admin-login.png",
+      "/assets/project-7/profile-1.png",
+      "/assets/project-7/profile-2.png",
     ],
-    architectureDiagrams: [],
-    dbDiagrams: [],
+
+    architectureDiagrams: ["/assets/project-7/image.png"],
+    dbDiagrams: ["/assets/project-7/image.png"],
     isTeamProject: true,
     team: [
       {
@@ -299,7 +374,7 @@ export const projects = [
       },
     ],
     github: "https://github.com/alexjohnson/algo-trader-sim",
-    liveUrl: "https://algo-trader-sim.com",
+    liveUrl: "https://ritikkumar352.github.io/SRMS/",
   },
 ];
 

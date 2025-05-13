@@ -5,30 +5,77 @@ import { Code, Database, Terminal, FileCode, Monitor, Server } from 'lucide-reac
 
 const Skills = () => {
   // Function to get appropriate icon for each skill
-  const getSkillIcon = (skillName) => {
-    const iconProps = { className: "w-full h-full text-black", strokeWidth: 1.5 };
+  // const getSkillIcon = (skillName) => {
+  //   const iconProps = { className: "w-full h-full text-black", strokeWidth: 1.5 };
     
-    switch(skillName.toLowerCase()) {
-      case 'python':
-        return <FileCode {...iconProps} />;
-      case 'javascript':
-        return <Code {...iconProps} />;
-      case 'react':
-        return <Monitor {...iconProps} />;
-      case 'java':
-        return <Terminal {...iconProps} />;
-      case 'c++':
-        return <Terminal {...iconProps} />;
-      case 'machine learning':
-        return <Server {...iconProps} />;
-      case 'sql':
-        return <Database {...iconProps} />;
-      case 'git':
-        return <Code {...iconProps} />;
-      default:
-        return <FileCode {...iconProps} />;
-    }
-  };
+  //   switch(skillName.toLowerCase()) {
+  //     case 'python':
+  //       return <FileCode {...iconProps} />;
+  //     case 'javascript':
+  //       return <Code {...iconProps} />;
+  //     case 'react':
+  //       return <Monitor {...iconProps} />;
+  //     case 'java':
+  //       return <Terminal {...iconProps} />;
+  //     case 'c++':
+  //       return <Terminal {...iconProps} />;
+  //     case 'machine learning':
+  //       return <Server {...iconProps} />;
+  //     case 'sql':
+  //       return <Database {...iconProps} />;
+  //     case 'git':
+  //       return <Code {...iconProps} />;
+  //     default:
+  //       return <FileCode {...iconProps} />;
+  //   }
+  // };
+
+  const getSkillIcon = (skillName) => {
+  const iconProps = { className: "w-full h-full text-black", strokeWidth: 1.5 };
+  
+  switch(skillName.toLowerCase()) {
+    case 'java':
+    case 'c':
+    case 'typescript':
+    case 'python':
+    case 'php':
+    case 'sql':
+      return <Terminal {...iconProps} />;
+    case 'spring boot':
+    case 'spring security':
+    case 'hibernate':
+      return <Server {...iconProps} />;
+    case 'rest apis':
+    case 'microservices':
+      return <Code {...iconProps} />;
+    case 'react.js':
+    case 'bootstrap':
+    case 'tailwind css':
+    case 'material-ui':
+    case 'html':
+    case 'css':
+      return <Monitor {...iconProps} />;
+    case 'mysql':
+    case 'postgresql':
+    case 'redis':
+      return <Database {...iconProps} />;
+    case 'docker':
+    case 'aws':
+    case 'google cloud':
+    case 'linux':
+      return <Laptop {...iconProps} />;
+    case 'github':
+    case 'git':
+    case 'postman':
+    case 'firebase':
+    case 'intellij idea':
+    case 'vs code':
+      return <Cog {...iconProps} />;
+    default:
+      return <FileCode {...iconProps} />;
+  }
+};
+
 
   return (
     <section id="skills" className="py-16 lg:py-24 bg-muted/30 retro-texture">

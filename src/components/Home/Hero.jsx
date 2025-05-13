@@ -22,7 +22,9 @@ const Hero = () => {
                 <p key={idx} className="pl-4 border-l-2 border-retro-teal">
                   {paragraph}
                 </p>
+            
               ))}
+              
             </div>
           </div>
         </div>

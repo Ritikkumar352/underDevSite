@@ -58,7 +58,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="hover:text-retro-purple transition-colors"
                 >
-                  github.com/yourusername
+                  github.com/ritikkumar352
                 </a>
               </div>
               <div>
@@ -69,7 +69,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="hover:text-retro-purple transition-colors"
                 >
-                  linkedin.com/in/yourusername
+                  linkedin.com/in/ritikkumar352
                 </a>
               </div>
             </div>

@@ -37,24 +37,29 @@ const AboutMePage = () => {
 
   const journey = [
     {
-      year: 2020,
-      title: "Started Computer Science Degree",
-      description: "Began my academic journey at Boston University"
-    },
-    {
-      year: 2021,
-      title: "First Programming Internship",
-      description: "Worked as a junior developer at TechStart Inc."
-    },
-    {
       year: 2022,
-      title: "Started Research in Machine Learning",
-      description: "Joined the AI research lab focusing on neural networks"
+      title: "Started Computer Science Degree, B.tech",
+      description: "Began my B.tech academic journey at ABES Engineering College, November 2022.",
+      details:""
     },
     {
-      year: 2023,
-      title: "Summer Coding Bootcamp",
-      description: "Completed an intensive web development bootcamp"
+      year: 2025,
+      title: "First Fullstack Internship -> (Java Spring Boot & React)",
+      description: "Worked as a Full Stack Intern (Java Spring Boot & React) at a startup, March 2025.",
+      details:"During this internship, I independently designed and developed the backend from scratch, including database architecture and solving critical challenges related to system design and integration and Gained professional experience using industry-standard tools like JIRA, Bitbucket, and version control systems to manage tasks, collaborate with teams, and maintain organized workflows for efficient development."
+      
+    },
+    {
+      year: 2025,
+      title: "Second Internship -> (Java Spring Boot)",
+      description: "Got an internship at Tutedude as a Java Spring Boot Backend Developer, April 2025.",
+      details:""
+    },
+    {
+      year: 2025,
+      title: "Third Internship ",
+      description: "xxxxxx , xxx 2025",
+      details:""
     }
   ];
 
@@ -99,7 +104,8 @@ const AboutMePage = () => {
               </h2>
               <div className="space-y-4 font-mono">
                 {personalInfo.bio.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
+                  // <p key={idx}>{paragraph}</p>
+                  <h6> helllo 1</h6>
                 ))}
                 <p>Beyond my academic pursuits, I'm passionate about using technology to create meaningful solutions that help people and make our world better. I believe in continuous learning and pushing myself to explore new technologies and approaches.</p>
               </div>
@@ -118,6 +124,7 @@ const AboutMePage = () => {
                   </div>
                   <h3 className="font-press-start text-lg">{event.title}</h3>
                   <p className="font-mono mt-2">{event.description}</p>
+                  <p className="font-mono mt-2 list-disc ml-5 text-white">{event.details}</p>
                 </div>
               ))}
             </div>
