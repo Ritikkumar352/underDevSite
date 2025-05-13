@@ -2,6 +2,7 @@ export const personalInfo = {
   name: "Ritik",
   title: "Computer Science Student & Developer",
   email: "ritik352alc@gmail.com",
+  email2: "ritik.22b0121085@abes.ac.in",
   phone: "+91 xxxxxxxxx",
   location: "Ghaziabad, India",
   github: "https://github.com/ritikkumar352",
@@ -141,6 +142,11 @@ export const projects = [
       "Built a video management system with cloud storage for easy uploading, streaming, deleting and downloading of videos.",
       "Implemented secure video access and efficient file organization using metadata stored in PostgreSQL while the video file is on GCP Bucket.",
       "Implemented same project using AWS S3 bucket and a simple React UI for the user.",
+    ],
+    documentation:[
+      " Project 2 test documentation",
+      " Project 2 test documentation",
+      " Project 2 test documentation",
     ],
     technologies: [
       "Java",

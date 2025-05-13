@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Github, ExternalLink, Users, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Github, ExternalLink, Users, ChevronLeft, ChevronRight, DockIcon } from 'lucide-react';
 
 const ProjectDetailSection = ({ project }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -167,7 +167,18 @@ const ProjectDetailSection = ({ project }) => {
             </div>
           </div>
         </div>
-        
+                
+        {/* TODO Project Documentation added here enable later... */} 
+        {/* <div className="retro-terminal mt-10">
+          <div className="flex items-center mb-6">
+            <DockIcon className="mr-2 text-retro-teal dark:text-retro-teal" size={24} />
+            {/* <h2 className="font-vt323 text-2xl">Project documentation</h2> */}
+            {/* <h2 className="font-vt323 text-2xl">{project.documentation}</h2>
+          </div>
+          
+          <h1 className="text md"> </h1>
+        </div> */} 
+
         {/* Team Section */}
         <div className="retro-terminal mt-10">
           <div className="flex items-center mb-6">

@@ -30,13 +30,15 @@ const AboutMePage = () => {
   const favoriteShows = [
     "Dark",
     "Silicon Valley",
-    "Lost in Space", 
     "Interstellar",
     "Mr. Robot",
+    "Passengers",
     "The Martian",
     "Oblivion",
     "Inception",
     "Source Code",
+    "Chernobyl",
+    "TVF Pitchers"
     
   ];
 

@@ -1,55 +1,54 @@
-
-import { useState } from 'react';
-import { personalInfo } from '../../data/portfolioData';
-import { Mail, Phone, Send } from 'lucide-react';
+import { useState } from "react";
+import { personalInfo } from "../../data/portfolioData";
+import { Mail, Phone, Send } from "lucide-react";
 
 const Contact = () => {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
-  
-  const [status, setStatus] = useState({ type: '', message: '' });
+
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
+    setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formState.name || !formState.email || !formState.message) {
       setStatus({
-        type: 'error',
-        message: 'Please fill out all required fields'
+        type: "error",
+        message: "Please fill out all required fields",
       });
       return;
     }
-    
+
     // In a real application, you'd send this data to a server
-    console.log('Form submitted:', formState);
-    
+    console.log("Form submitted:", formState);
+
     // Show success message
     setStatus({
-      type: 'success',
-      message: 'Message sent successfully! I will get back to you soon.'
+      type: "success",
+      message: "Message sent successfully! I will get back to you soon.",
     });
-    
+
     // Reset form
     setFormState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
-    
+
     // Clear success message after 5 seconds
     setTimeout(() => {
-      setStatus({ type: '', message: '' });
+      setStatus({ type: "", message: "" });
     }, 5000);
   };
 
@@ -73,8 +72,8 @@ const Contact = () => {
                 <Mail className="text-retro-teal mt-1" size={24} />
                 <div>
                   <h3 className="font-vt323 text-xl mb-1">Email</h3>
-                  <a 
-                    href={`mailto:${personalInfo.email}`} 
+                  <a
+                    href={`mailto:${personalInfo.email}`}
                     className="hover:text-primary transition-colors"
                   >
                     {personalInfo.email}
@@ -83,11 +82,26 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start space-x-4">
+                <Mail className="text-retro-teal mt-1" size={24} />
+                <div>
+                  <h3 className="font-vt323 text-xl mb-1">Email</h3>
+                  <a 
+                    href={`mailto:${"personalInfo.email2"}`} 
+                    className="hover:text-primary transition-colors"
+                  >
+                    {personalInfo.email2}
+                  </a>
+                </div>
+                
+                
+              </div>
+
+              <div className="flex items-start space-x-4">
                 <Phone className="text-retro-teal mt-1" size={24} />
                 <div>
                   <h3 className="font-vt323 text-xl mb-1">Phone</h3>
-                  <a 
-                    href={`tel:${personalInfo.phone}`} 
+                  <a
+                    href={`tel:${personalInfo.phone}`}
                     className="hover:text-primary transition-colors"
                   >
                     {personalInfo.phone}
@@ -96,7 +110,10 @@ const Contact = () => {
               </div>
 
               <div className="pt-4 border-t border-retro-purple/30 text-sm">
-                <p>I'm always open to discussing new projects, opportunities, or partnerships.</p>
+                <p>
+                  I'm always open to discussing new projects, opportunities, or
+                  partnerships.
+                </p>
               </div>
             </div>
           </div>
@@ -123,7 +140,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block font-vt323 text-lg mb-1">
+                <label
+                  htmlFor="email"
+                  className="block font-vt323 text-lg mb-1"
+                >
                   Email:
                 </label>
                 <input
@@ -138,7 +158,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block font-vt323 text-lg mb-1">
+                <label
+                  htmlFor="subject"
+                  className="block font-vt323 text-lg mb-1"
+                >
                   Subject:
                 </label>
                 <input
@@ -152,7 +175,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block font-vt323 text-lg mb-1">
+                <label
+                  htmlFor="message"
+                  className="block font-vt323 text-lg mb-1"
+                >
                   Message:
                 </label>
                 <textarea
@@ -160,16 +186,18 @@ const Contact = () => {
                   name="message"
                   value={formState.message}
                   onChange={handleChange}
-                  rows="5"
+                  rows="2"
                   className="w-full p-2 bg-background border-2 border-retro-purple/70 rounded font-mono"
                   required
                 />
               </div>
 
               {status.message && (
-                <div className={`p-2 text-white rounded font-mono text-sm ${
-                  status.type === 'error' ? 'bg-red-600' : 'bg-green-600'
-                }`}>
+                <div
+                  className={`p-2 text-white rounded font-mono text-sm ${
+                    status.type === "error" ? "bg-red-600" : "bg-green-600"
+                  }`}
+                >
                   {status.message}
                 </div>
               )}
