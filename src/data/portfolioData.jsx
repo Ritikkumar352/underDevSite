@@ -332,7 +332,7 @@ export const projects = [
       "Used PHP for backend processing and MySQL for data storage.",
     ],
     technologies: ["PHP", "HTML", "CSS", "Bootstrap", "JavaScript", "MySQL"],
-    thumbnail: "public/assets/project-7/srms-home.png",
+    thumbnail: "/assets/project-7/srms-home.png",
     images: [
       "/assets/project-7/home.png",
       "/assets/project-7/register.png",
