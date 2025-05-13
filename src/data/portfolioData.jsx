@@ -1,4 +1,3 @@
-
 export const personalInfo = {
   name: "Ritik",
   title: "Computer Science Student & Developer",
@@ -8,6 +7,7 @@ export const personalInfo = {
   github: "https://github.com/ritikkumar352",
   linkedin: "https://www.linkedin.com/in/ritikkumar352",
   photo: "/assets/Ritik-pfp.png",
+  photo2: "/assets/PFP_Grey.jpg",
   role: "Full Stack Developer",
   bio: [
     "Hi! I'm a third-year Computer Science student at ABES Engineering College, with a strong interest in software development and scalable web systems.",
@@ -50,18 +50,22 @@ export const education = [
 
 export const skills = [
   { name: "Java", level: 90 },
+  { name: "Spring Boot", level: 85 },
+  { name: "SQL", level: 75 },
+  { name: "React.js", level: 85 },
+  { name: "Google Cloud", level: 70 },
+  { name: "Docker", level: 80 },
   { name: "C", level: 85 },
   { name: "JavaScript", level: 80 },
-  { name: "TypeScript", level: 75 },
-  { name: "Python", level: 70 },
+
   { name: "PHP", level: 65 },
-  { name: "SQL", level: 75 },
-  { name: "Spring Boot", level: 85 },
+
   { name: "Spring Security", level: 80 },
   { name: "Hibernate", level: 75 },
   { name: "REST APIs", level: 80 },
   { name: "Microservices", level: 70 },
-  { name: "React.js", level: 85 },
+  { name: "Python", level: 70 },
+  
   { name: "Bootstrap", level: 75 },
   { name: "Tailwind CSS", level: 80 },
   { name: "Material-UI", level: 70 },
@@ -70,9 +74,9 @@ export const skills = [
   { name: "MySQL", level: 85 },
   { name: "PostgreSQL", level: 80 },
   { name: "Redis", level: 70 },
-  { name: "Docker", level: 80 },
+  
   { name: "AWS", level: 75 },
-  { name: "Google Cloud", level: 70 },
+  
   { name: "Linux", level: 75 },
   { name: "GitHub", level: 85 },
   { name: "Git", level: 80 },
@@ -81,11 +85,6 @@ export const skills = [
   { name: "IntelliJ IDEA", level: 75 },
   { name: "VS Code", level: 80 },
 ];
-
-
-
-
-
 
 export const projects = [
   {
@@ -96,7 +95,7 @@ export const projects = [
     description: [
       "Developed a web-based CRM application for managing customer information, communication, creating campaigns and analytics.",
       "Integrated data visualization and reporting features to enhance customer interaction tracking.",
-      "Built a user-friendly UI with Admin Login using O-Auth 2 which is fast and secure."
+      "Built a user-friendly UI with Admin Login using O-Auth 2 which is fast and secure.",
     ],
     technologies: [
       "Java",
@@ -107,23 +106,17 @@ export const projects = [
       "Firebase",
       "Spring Security",
       "Google Cloud",
-      "AWS Amplify"
+      "AWS Amplify",
     ],
     thumbnail: "/assets/project-1/crm-login-page.png",
     images: [
       "/assets/project-1/dashboard.png",
       "/assets/project-1/segment.png",
       "/assets/project-1/campaign.png",
-      "/assets/project-1/crm-login-page.png"
+      "/assets/project-1/crm-login-page.png",
     ],
-    architectureDiagrams: [
-      "/assets/project-1/Application-flow.jpeg",
-      
-    ],
-    dbDiagrams: [
-      "/assets/project-1/db-diagrma-code.png",
-      
-    ],
+    architectureDiagrams: ["/assets/project-1/Application-flow.jpeg"],
+    dbDiagrams: ["/assets/project-1/db-diagrma-code.png"],
     isTeamProject: false,
     team: [
       {
@@ -136,7 +129,6 @@ export const projects = [
         role: "UI/UX Designer",
         photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
       },
-  
     ],
     github: "https://github.com/Ritikkumar352/miniCrm",
     liveUrl: "https://main.d3pha96ypv251i.amplifyapp.com/",
@@ -144,12 +136,11 @@ export const projects = [
   {
     id: 2,
     title: "Vid-vault [cloud]",
-    shortDescription:
-      "A cloud-based video management application.",
+    shortDescription: "A cloud-based video management application.",
     description: [
-     "Built a video management system with cloud storage for easy uploading, streaming, deleting and downloading of videos.",
+      "Built a video management system with cloud storage for easy uploading, streaming, deleting and downloading of videos.",
       "Implemented secure video access and efficient file organization using metadata stored in PostgreSQL while the video file is on GCP Bucket.",
-      "Implemented same project using AWS S3 bucket and a simple React UI for the user."
+      "Implemented same project using AWS S3 bucket and a simple React UI for the user.",
     ],
     technologies: [
       "Java",
@@ -160,19 +151,15 @@ export const projects = [
       "React",
     ],
     thumbnail: "assets/project-2/vidvault-home.png",
-    images: [
-      "/assets/project-2/vidvault-home.png"
-    ],
+    images: ["/assets/project-2/vidvault-home.png"],
     architectureDiagrams: [
       "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
     ],
-    dbDiagrams: [
-      "/assets/project-2/vidvault-home.png"
-    ],
+    dbDiagrams: ["/assets/project-2/vidvault-home.png"],
     isTeamProject: false,
     team: [
       {
-       name: "Ritik",
+        name: "Ritik",
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
@@ -192,7 +179,7 @@ export const projects = [
     description: [
       "Facilitates campus-specific services including canteen menus, order tracking, and notifications.",
       "Integrated UPI payment for streamlined transactions during peak hours.",
-      "Email-based authentication to filter canteen availability by college."
+      "Email-based authentication to filter canteen availability by college.",
     ],
     technologies: [
       "Kotlin",
@@ -200,15 +187,11 @@ export const projects = [
       "PostgreSQL",
       "Google Storage bucket",
       "Firebase",
-      "TailwindCSS"
+      "TailwindCSS",
     ],
-    thumbnail:  "/assets/project-3/archit-campus-dock.png",
-    images: [
-       "/assets/project-3/archit-campus-dock.png",
-    ],
-    architectureDiagrams: [
-      "/assets/project-3/archit-campus-dock.png",
-    ],
+    thumbnail: "/assets/project-3/archit-campus-dock.png",
+    images: ["/assets/project-3/archit-campus-dock.png"],
+    architectureDiagrams: ["/assets/project-3/archit-campus-dock.png"],
     dbDiagrams: [],
     isTeamProject: true,
     team: [
@@ -220,7 +203,7 @@ export const projects = [
       {
         name: "Sayed Haneef",
         role: "Backend Developer, Android Developer",
-        photo: "public/assets/2024-05-05 (7).png",
+        photo: "/assets/project-2/haneef-campusDock.jpeg",
       },
     ],
     // TODO add the link to the project
@@ -230,18 +213,19 @@ export const projects = [
   {
     id: 4,
     title: "Real-Time Chat App, Ongoing**",
-    shortDescription: "A real-time messaging application with group and direct chat",
+    shortDescription:
+      "A real-time messaging application with group and direct chat",
     description: [
       "Implemented real-time chat using WebSockets for seamless communication.",
       "Features include group creation, user authentication, and message persistence.",
-      "Integrated notifications for message updates and typing indicators."
-     ],
+      "Integrated notifications for message updates and typing indicators.",
+    ],
     technologies: [
       "React",
       "Spring Boot",
       "PostgreSQL",
       "WebSockets",
-      "Docker"
+      "Docker",
     ],
     thumbnail: "/assets/under-dev.jpg",
     images: [
@@ -272,17 +256,12 @@ export const projects = [
     title: "User Authentication System",
     shortDescription: "Secure login and registration system and Sessions.",
     description: [
-     "Implemented secure user authentication with JWT and OAuth2.",
+      "Implemented secure user authentication with JWT and OAuth2.",
       "Password hashing and role-based access management.",
-      "Integrated Google and email-based sign-in options." ],
-    technologies: [ 
-      "Java",
-      "Spring Boot",
-      "React",
-      "JWT",
-      "OAuth2"
+      "Integrated Google and email-based sign-in options.",
     ],
-    thumbnail:  "/assets/under-dev.jpg",
+    technologies: ["Java", "Spring Boot", "React", "JWT", "OAuth2"],
+    thumbnail: "/assets/under-dev.jpg",
     images: [
       "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
@@ -308,25 +287,22 @@ export const projects = [
   {
     id: 6,
     title: "Youtube Bacckend Clone",
-    shortDescription: "A full-featured backend for a YouTube-like platform, utilizing MERN stack and Cloudinary for video uploads.",
+    shortDescription:
+      "A full-featured backend for a YouTube-like platform, utilizing MERN stack and Cloudinary for video uploads.",
     description: [
       "Developed a scalable backend to handle video uploads, processing, and streaming.",
       "Integrated Cloudinary for efficient video storage and delivery.",
-      "Implemented user authentication and video management using the MERN stack."
-  ],
+      "Implemented user authentication and video management using the MERN stack.",
+    ],
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Cloudinary"],
-    thumbnail:  "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png",
-    images: [
-      "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"
-    ],
+    thumbnail: "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png",
+    images: ["/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"],
     architectureDiagrams: [],
-    dbDiagrams: [
-      "/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"
-    ],
+    dbDiagrams: ["/assets/project-6/diagram-export-13-5-2025-2_11_48-am.png"],
     isTeamProject: false,
     team: [
       {
-       name: "Ritik",
+        name: "Ritik",
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
@@ -342,14 +318,15 @@ export const projects = [
   {
     id: 7,
     title: "SRMS (Student Result Management System)",
-    shortDescription: "A web-based system for managing student results, built with PHP and a modern web stack.",
+    shortDescription:
+      "A web-based system for managing student results, built with PHP and a modern web stack.",
     description: [
-     "Developed a comprehensive platform for managing and displaying student results.",
+      "Developed a comprehensive platform for managing and displaying student results.",
       "Implemented a secure and user-friendly interface using HTML, CSS, Bootstrap, and JavaScript.",
-      "Used PHP for backend processing and MySQL for data storage."
-   ],
+      "Used PHP for backend processing and MySQL for data storage.",
+    ],
     technologies: ["PHP", "HTML", "CSS", "Bootstrap", "JavaScript", "MySQL"],
-    thumbnail:  "public/assets/project-7/srms-home.png",
+    thumbnail: "public/assets/project-7/srms-home.png",
     images: [
       "/assets/project-7/home.png",
       "/assets/project-7/register.png",
@@ -392,7 +369,8 @@ export const contactInfo = {
       url: "https://www.linkedin.com/in/ritikkumar352",
       icon: "linkedin",
     },
-    {  // TODO add those links to the footer
+    {
+      // TODO add those links to the footer
       platform: "Twitter",
       url: "https://twitter.com/ritikkumar352",
       icon: "twitter",

@@ -1,8 +1,31 @@
 
 import { Link } from 'react-router-dom';
 import { skills } from '../../data/portfolioData';
-import { Code, Database, Terminal, FileCode, Monitor, Server } from 'lucide-react';
-
+import {
+  ArrowLeft,
+  Code,
+  Database,
+  Terminal,
+  FileCode,
+  Monitor,
+  Server,
+  Laptop,
+  Smartphone,
+  Cog,
+  ServerCog,
+  DatabaseZap,
+  Braces,
+  Copyright,
+  PowerCircle,
+  CirclePower,
+  Shield,
+  Microscope,
+  Cloud,
+  Container,
+  GitBranch,
+  Github,
+  ShieldCheckIcon,
+} from "lucide-react";
 const Skills = () => {
   // Function to get appropriate icon for each skill
   // const getSkillIcon = (skillName) => {
@@ -34,45 +57,58 @@ const Skills = () => {
   const iconProps = { className: "w-full h-full text-black", strokeWidth: 1.5 };
   
   switch(skillName.toLowerCase()) {
-    case 'java':
-    case 'c':
-    case 'typescript':
-    case 'python':
-    case 'php':
-    case 'sql':
-      return <Terminal {...iconProps} />;
-    case 'spring boot':
-    case 'spring security':
-    case 'hibernate':
-      return <Server {...iconProps} />;
-    case 'rest apis':
-    case 'microservices':
-      return <Code {...iconProps} />;
-    case 'react.js':
-    case 'bootstrap':
-    case 'tailwind css':
-    case 'material-ui':
-    case 'html':
-    case 'css':
-      return <Monitor {...iconProps} />;
-    case 'mysql':
-    case 'postgresql':
-    case 'redis':
-      return <Database {...iconProps} />;
-    case 'docker':
-    case 'aws':
-    case 'google cloud':
-    case 'linux':
-      return <Laptop {...iconProps} />;
-    case 'github':
-    case 'git':
-    case 'postman':
-    case 'firebase':
-    case 'intellij idea':
-    case 'vs code':
-      return <Cog {...iconProps} />;
-    default:
-      return <FileCode {...iconProps} />;
+    case "html":
+        return <Code {...iconProps} />;
+      case "microservices":
+        return <Microscope {...iconProps} />;
+      case "spring security":
+        return <ShieldCheckIcon {...iconProps} />;
+      case "python":
+        return <FileCode {...iconProps} />;
+      case "javascript":
+        return <Code {...iconProps} />;
+      case "react":
+        return <Monitor {...iconProps} />;
+      case "java":
+        return <Braces {...iconProps} />;
+      case "c":
+        return <Copyright {...iconProps} />;
+      case "html/css":
+        return <FileCode {...iconProps} />;
+      case "node.js":
+        return <Server {...iconProps} />;
+      case "angular":
+        return <Code {...iconProps} />;
+      case "machine learning":
+        return <Server {...iconProps} />;
+      case "sql":
+        return <FileCode {...iconProps} />;
+      case "mysql":
+        return <Database {...iconProps} />;
+      case "postgresql":
+        return <Database {...iconProps} />;
+      case "mongodb":
+        return <Database {...iconProps} />;
+      case "mongodb":
+        return <Database {...iconProps} />;
+      case "redis":
+        return <DatabaseZap {...iconProps} />;
+      case "git":
+        return <GitBranch {...iconProps} />;
+      case "docker":
+        return <Container {...iconProps} />;
+      case "aws":
+        return <Server {...iconProps} />;
+      case "linux":
+        return <Terminal {...iconProps} />;
+      case "google cloud":
+        return <Cloud {...iconProps} />;
+      case "spring boot":
+        return <CirclePower {...iconProps} />;
+      case "github":
+        return <Github {...iconProps} />;
+      default:
+        return <Cog {...iconProps} />;
   }
 };
 
