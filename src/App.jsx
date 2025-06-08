@@ -7,6 +7,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage';
 import AboutMePage from './pages/AboutMePage';
 import SkillsPage from './pages/SkillsPage';
 import NotFound from './pages/NotFound';
+import Contact from './components/Home/Contact';
 
 const App = () => (
   <ThemeProvider>
@@ -18,6 +19,8 @@ const App = () => (
         <Route path="/about" element={<AboutMePage />} />
         <Route path="/skills" element={<SkillsPage />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* // add blog page and then add path here */}    TODO
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

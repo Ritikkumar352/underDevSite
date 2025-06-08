@@ -1,8 +1,7 @@
-
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import { useTheme } from '../../components/ThemeProvider';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "../../components/ThemeProvider";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -10,8 +9,10 @@ const NavBar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projects' },
+    { name: "Home", path: "/" },
+    { name: "Projects", path: "/projects" },
+    { name: "contact", path: "/contact" },  // add path for contact
+    // {name:'blog', path:'/blog'},   TODO
   ];
 
   const isActive = (path) => {
@@ -35,19 +36,21 @@ const NavBar = () => {
         <button
           onClick={toggleMenu}
           className="md:hidden text-foreground"
-          aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}
+          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          {navItems.map(item => (
+          {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
               className={`font-vt323 text-xl hover:text-primary transition-colors ${
-                isActive(item.path) ? 'text-primary border-b-2 border-primary' : ''
+                isActive(item.path)
+                  ? "text-primary border-b-2 border-primary"
+                  : ""
               }`}
             >
               {item.name}
@@ -56,9 +59,11 @@ const NavBar = () => {
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-muted hover:bg-muted-foreground/20 transition-colors"
-            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            aria-label={
+              theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
           >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
         </nav>
 
@@ -66,12 +71,12 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border">
             <nav className="flex flex-col p-4 space-y-4">
-              {navItems.map(item => (
+              {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
                   className={`font-vt323 text-xl hover:text-primary transition-colors ${
-                    isActive(item.path) ? 'text-primary' : ''
+                    isActive(item.path) ? "text-primary" : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -81,10 +86,14 @@ const NavBar = () => {
               <button
                 onClick={toggleTheme}
                 className="flex items-center space-x-2 font-vt323 text-xl hover:text-primary transition-colors"
-                aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                aria-label={
+                  theme === "dark"
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+                }
               >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+                <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
               </button>
             </nav>
           </div>
