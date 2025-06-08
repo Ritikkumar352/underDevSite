@@ -125,11 +125,7 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      {
-        name: "Priya Sharma",
-        role: "UI/UX Designer",
-        photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-      },
+     
     ],
     github: "https://github.com/Ritikkumar352/miniCrm",
     liveUrl: "https://main.d3pha96ypv251i.amplifyapp.com/",
@@ -169,11 +165,7 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      {
-        name: "Taylor Wilson",
-        role: "Frontend Developer",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      },
+     
     ],
     github: "https://github.com/Ritikkumar352/VidVault",
     liveUrl: "https://vidvault.me/",
@@ -247,11 +239,7 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      {
-        name: "Taylor Wilson",
-        role: "Frontend Developer",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      },
+     
     ],
     // TODO add the live link to the project
     github: "https://github.com/Ritikkumar352/ChatLive",
@@ -281,11 +269,7 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      {
-        name: "Taylor Wilson",
-        role: "Frontend Developer",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      },
+      
     ],
     github: "https://github.com/Ritikkumar352/authentication_Spring-Boot",
     liveUrl: "",
@@ -312,11 +296,7 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      {
-        name: "Taylor Wilson",
-        role: "Frontend Developer",
-        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      },
+     
     ],
     github: "https://github.com/alexjohnson/algo-trader-sim",
     liveUrl: "https://algo-trader-sim.com",
