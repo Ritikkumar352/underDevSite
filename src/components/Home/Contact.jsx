@@ -35,8 +35,9 @@ const Contact = () => {
     console.log("Form submitted:", formState);
 
     setStatus({
-      type: "success",
-      message: "Message sent successfully! I will get back to you soon.",
+      type: "success",  // failed 
+      // message: "Message sent successfully! I will get back to you soon.",
+      message: "Failed to send -> ⚠  This section is Under Maintanence",
     });
 
     setFormState({
@@ -121,8 +122,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
+            {/* // TODO : create a contact page for adding footer to that... in pages  */}
+            {/* // TODO : make this contact page working  */}
             <div className="retro-terminal">
+              <h1> ⚠ Under Maintanence </h1>
               <p className="font-vt323 text-xl md:text-2xl mb-6">
                 <span className="text-retro-teal">$</span> send --message
               </p>
