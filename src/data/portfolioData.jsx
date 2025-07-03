@@ -11,7 +11,7 @@ export const personalInfo = {
   photo2: "/assets/PFP_Grey.jpg",
   role: "Full Stack Developer",
   bio: [
-    "Hi! I'm a third-year Computer Science student at ABES Engineering College, with a strong interest in software development and scalable web systems.",
+    "Hi! I'm a final-year Computer Science student at ABES Engineering College, with a strong interest in software development and scalable web systems.",
     "I’ve worked extensively with Java, Spring Boot, SQL, and also built full-stack applications using React, Tailwind CSS, and Docker.",
     "I've developed and deployed real-world projects involving Google OAuth 2.0, REST APIs, and campaign management systems, hosted on platforms like AWS (Amplify, EC2) and GCP (Compute Engine).",
   ],
