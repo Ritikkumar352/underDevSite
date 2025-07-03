@@ -11,8 +11,12 @@ const NavBar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
-    { name: "contact", path: "/contact" },  // add path for contact
-    // {name:'blog', path:'/blog'},   TODO
+    { name: "contact", path: "/contact" },
+    {
+      name: "Resume",
+      external: true,
+      url: "https://drive.google.com/uc?export=download&id=1qigBIjnIS5a3_O48dfl0KsGKL0WSrkyl",
+    },
   ];
 
   const isActive = (path) => {
@@ -43,19 +47,31 @@ const NavBar = () => {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              className={`font-vt323 text-xl hover:text-primary transition-colors ${
-                isActive(item.path)
-                  ? "text-primary border-b-2 border-primary"
-                  : ""
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.external ? (
+              <a
+                key={item.name}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-vt323 text-xl hover:text-primary transition-colors"
+              >
+                {item.name}
+              </a>
+            ) : (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`font-vt323 text-xl hover:text-primary transition-colors ${
+                  isActive(item.path)
+                    ? "text-primary border-b-2 border-primary"
+                    : ""
+                }`}
+              >
+                {item.name}
+              </Link>
+            )
+          )}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-muted hover:bg-muted-foreground/20 transition-colors"
@@ -71,18 +87,31 @@ const NavBar = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border">
             <nav className="flex flex-col p-4 space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`font-vt323 text-xl hover:text-primary transition-colors ${
-                    isActive(item.path) ? "text-primary" : ""
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navItems.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-vt323 text-xl hover:text-primary transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`font-vt323 text-xl hover:text-primary transition-colors ${
+                      isActive(item.path) ? "text-primary" : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
               <button
                 onClick={toggleTheme}
                 className="flex items-center space-x-2 font-vt323 text-xl hover:text-primary transition-colors"
