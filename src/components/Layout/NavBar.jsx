@@ -15,7 +15,7 @@ const NavBar = () => {
     {
       name: "Resume",
       external: true,
-      url: "https://drive.google.com/uc?export=download&id=1qigBIjnIS5a3_O48dfl0KsGKL0WSrkyl",
+      url: "https://drive.google.com/uc?export=download&id=1S16w-hNmsm2xkJKsLalXlkUWTh2QiOfp",
     },
   ];
 
