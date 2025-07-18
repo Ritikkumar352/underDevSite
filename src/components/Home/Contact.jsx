@@ -1,7 +1,23 @@
+import { useState } from "react";
 import { personalInfo } from "../../data/portfolioData";
 import { Mail, Phone, Send } from "lucide-react";
 
 const Contact = () => {
+  const [status, setStatus] = useState(""); // "success" | "error" | ""
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => setStatus("success"))
+      .catch(() => setStatus("error"));
+    form.reset();
+  };
+
   return (
     <section id="contact" className="py-16 lg:py-24 bg-muted/30">
       <div className="retro-container">
@@ -74,7 +90,7 @@ const Contact = () => {
               name="contact"
               method="POST"
               data-netlify="true"
-              action="/thank-you"
+              onSubmit={handleSubmit}
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -135,6 +151,17 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            {status === "success" && (
+              <div className="mt-4 p-2 bg-green-600 text-white rounded font-mono">
+                Thank you for reaching out! Your message has been received.<br />
+                I appreciate your interest and will contact you soon.
+              </div>
+            )}
+            {status === "error" && (
+              <div className="mt-4 p-2 bg-red-600 text-white rounded font-mono">
+                Something went wrong. Please try again.
+              </div>
+            )}
           </div>
         </div>
       </div>
