@@ -1,58 +1,7 @@
-import { useState } from "react";
 import { personalInfo } from "../../data/portfolioData";
 import { Mail, Phone, Send } from "lucide-react";
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState({ type: "", message: "" });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!formState.name || !formState.email || !formState.message) {
-      setStatus({
-        type: "error",
-        message: "Please fill out all required fields",
-      });
-      return;
-    }
-
- 
-    console.log("Form submitted:", formState);
-
-    setStatus({
-      type: "success", // failed 
-      // message: "Message sent successfully! I will get back to you soon.",
-      message: "Failed to send -> ⚠  This section is Under Maintanence",
-    });
-
-    setFormState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-
-    // Clear success message after 5 seconds
-    setTimeout(() => {
-      setStatus({ type: "", message: "" });
-    }, 5000);
-  };
-
-  // TODO : create a backend endpoint to handle form submission 
-  // TODO : Create a contact page for adding footer to that... in pages
-
   return (
     <section id="contact" className="py-16 lg:py-24 bg-muted/30">
       <div className="retro-container">
@@ -87,7 +36,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-vt323 text-xl mb-1">Email</h3>
                   <a
-                    href={`mailto:${"personalInfo.email2"}`}
+                    href={`mailto:${personalInfo.email2}`}
                     className="hover:text-primary transition-colors"
                   >
                     {personalInfo.email2}
@@ -116,96 +65,66 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          {/* // TODO : create a contact page for adding footer to that... in pages  */}
-          {/* // TODO : make this contact page working  */}
           <div className="retro-terminal">
-            <h1> ⚠ Under Maintanence </h1>
+            <h1>Contact Form</h1>
             <p className="font-vt323 text-xl md:text-2xl mb-6">
               <span className="text-retro-teal">$</span> send --message
             </p>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              action="/thank-you"
+              className="space-y-4"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <div>
-                <label
-                  htmlFor="name"
-                  className="block font-vt323 text-lg mb-1"
-                >
+                <label htmlFor="name" className="block font-vt323 text-lg mb-1">
                   Name:
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  value={formState.name}
-                  onChange={handleChange}
                   className="w-full p-2 bg-background border-2 border-retro-purple/70 rounded font-mono"
                   required
                 />
               </div>
-
               <div>
-                <label
-                  htmlFor="email"
-                  className="block font-vt323 text-lg mb-1"
-                >
+                <label htmlFor="email" className="block font-vt323 text-lg mb-1">
                   Email:
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  value={formState.email}
-                  onChange={handleChange}
                   className="w-full p-2 bg-background border-2 border-retro-purple/70 rounded font-mono"
                   required
                 />
               </div>
-
               <div>
-                <label
-                  htmlFor="subject"
-                  className="block font-vt323 text-lg mb-1"
-                >
+                <label htmlFor="subject" className="block font-vt323 text-lg mb-1">
                   Subject:
                 </label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  value={formState.subject}
-                  onChange={handleChange}
                   className="w-full p-2 bg-background border-2 border-retro-purple/70 rounded font-mono"
                 />
               </div>
-
               <div>
-                <label
-                  htmlFor="message"
-                  className="block font-vt323 text-lg mb-1"
-                >
+                <label htmlFor="message" className="block font-vt323 text-lg mb-1">
                   Message:
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formState.message}
-                  onChange={handleChange}
                   rows="2"
                   className="w-full p-2 bg-background border-2 border-retro-purple/70 rounded font-mono"
                   required
                 />
               </div>
-
-              {status.message && (
-                <div
-                  className={`p-2 text-white rounded font-mono text-sm ${
-                    status.type === "error" ? "bg-red-600" : "bg-green-600"
-                  }`}
-                >
-                  {status.message}
-                </div>
-              )}
-
               <div className="text-center">
                 <button
                   type="submit"
