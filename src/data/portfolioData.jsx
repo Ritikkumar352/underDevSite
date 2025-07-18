@@ -66,7 +66,7 @@ export const skills = [
   { name: "REST APIs", level: 80 },
   { name: "Microservices", level: 70 },
   { name: "Python", level: 70 },
-  
+
   { name: "Bootstrap", level: 75 },
   { name: "Tailwind CSS", level: 80 },
   { name: "Material-UI", level: 70 },
@@ -75,9 +75,9 @@ export const skills = [
   { name: "MySQL", level: 85 },
   { name: "PostgreSQL", level: 80 },
   { name: "Redis", level: 70 },
-  
+
   { name: "AWS", level: 75 },
-  
+
   { name: "Linux", level: 75 },
   { name: "GitHub", level: 85 },
   { name: "Git", level: 80 },
@@ -85,6 +85,39 @@ export const skills = [
   { name: "Firebase", level: 70 },
   { name: "IntelliJ IDEA", level: 75 },
   { name: "VS Code", level: 80 },
+];
+
+export const experience = [
+  // {
+  //   year: 2022,
+  //   title: "Started Computer Science Degree, B.tech",
+  //   description:
+  //     "Began my B.tech academic journey at ABES Engineering College, November 2022.",
+  //   details: "",
+  // },
+  {
+    year: 2025,
+    title:
+      "1. Full-Stack Developer (Java + Spring Boot) – Dazznix AI [Stealth Startup]",
+    description:
+      "Internship | Full Stack Developer (Spring Boot & React) | Mar – Jun 2025 | Remote",
+    details:
+      "Independently designed and developed a scalable backend from scratch using Java, Spring Boot, and MySQL. Architected the database, implemented RESTful APIs, and optimized performance using native SQL queries. Integrated AWS S3 for media uploads with pre-signed URLs. Defined consistent API standards including versioning, pagination, and sorting. Used JIRA, Bitbucket, and Git for agile development, task tracking, and team collaboration in a startup environment.",
+  },
+
+  {
+    year: 2025,
+    title: "2. Java Spring Boot Developer Intern – Tutedude",
+    description:
+      "Got an internship at Tutedude as a Java Spring Boot Backend Developer, April 2025.",
+    details: "",
+  },
+  // {
+  //   year: 2025,
+  //   title: "Third Internship ",
+  //   description: "xxxxxx , xxx 2025",
+  //   details: "",
+  // },
 ];
 
 export const projects = [
@@ -125,7 +158,6 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-     
     ],
     github: "https://github.com/Ritikkumar352/miniCrm",
     liveUrl: "https://main.d3pha96ypv251i.amplifyapp.com/",
@@ -139,7 +171,7 @@ export const projects = [
       "Implemented secure video access and efficient file organization using metadata stored in PostgreSQL while the video file is on GCP Bucket.",
       "Implemented same project using AWS S3 bucket and a simple React UI for the user.",
     ],
-    documentation:[
+    documentation: [
       " Project 2 test documentation",
       " Project 2 test documentation",
       " Project 2 test documentation",
@@ -165,7 +197,6 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-     
     ],
     github: "https://github.com/Ritikkumar352/VidVault",
     liveUrl: "https://vidvault.me/",
@@ -239,7 +270,6 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-     
     ],
     // TODO add the live link to the project
     github: "https://github.com/Ritikkumar352/ChatLive",
@@ -269,7 +299,6 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-      
     ],
     github: "https://github.com/Ritikkumar352/authentication_Spring-Boot",
     liveUrl: "",
@@ -296,7 +325,6 @@ export const projects = [
         role: personalInfo.role,
         photo: personalInfo.photo,
       },
-     
     ],
     github: "https://github.com/alexjohnson/algo-trader-sim",
     liveUrl: "https://algo-trader-sim.com",

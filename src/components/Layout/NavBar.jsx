@@ -11,11 +11,12 @@ const NavBar = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
+    { name: "Experience", path: "/#experience" },
     { name: "contact", path: "/contact" },
     {
       name: "Resume",
       external: true,
-      url: "https://drive.google.com/uc?export=download&id=1S16w-hNmsm2xkJKsLalXlkUWTh2QiOfp",
+      url: "https://drive.google.com/uc?export=download&id=1kWFDBeO7uOcDuoTilK76H56jFQvStSvb",
     },
   ];
 

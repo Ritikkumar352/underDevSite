@@ -8,6 +8,7 @@ import AboutMePage from './pages/AboutMePage';
 import SkillsPage from './pages/SkillsPage';
 import NotFound from './pages/NotFound';
 import Contact from './components/Home/Contact';
+import ExperiencePage from './pages/ExperiencePage';
 
 const App = () => (
   <ThemeProvider>
@@ -18,6 +19,7 @@ const App = () => (
         <Route path="/projects/:id" element={<ProjectDetailPage />} />
         <Route path="/about" element={<AboutMePage />} />
         <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/contact" element={<Contact />} />
         {/* // add blog page and then add path here */}    TODO
