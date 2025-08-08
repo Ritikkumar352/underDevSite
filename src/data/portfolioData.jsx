@@ -123,6 +123,45 @@ export const experience = [
 export const projects = [
   {
     id: 1,
+    title: "Campus Dock (Ongoing)**",
+    shortDescription: "A one-stop smart utility app for college students.",
+    description: [
+      "Facilitates campus-specific services including canteen menus, order tracking, and notifications.",
+      "Integrated UPI payment for streamlined transactions during peak hours.",
+      "Email (Only College email) based authentication to filter canteen availability by college.",
+      "Social page for students to share posts, photos, and events in college.",
+      "Market Place for students to buy and sell items and any services within the college community.",
+    ],
+    technologies: [
+      "Kotlin",
+      "Spring Boot",
+      "PostgreSQL",
+      "Google Storage bucket",
+      "Firebase",
+      "TailwindCSS",
+    ],
+    thumbnail: "/assets/project-3/archit-campus-dock.png",
+    images: ["/assets/project-3/archit-campus-dock.png"],   // TODO : add more recent images
+    architectureDiagrams: ["/assets/project-3/archit-campus-dock.png"],
+    dbDiagrams: [],
+    isTeamProject: true,
+    team: [
+      {
+        name: "Ritik",
+        role: personalInfo.role,
+        photo: personalInfo.photo,
+      },
+      {
+        name: "Sayed Haneef",
+        role: "Backend Developer, Android Developer",
+        photo: "/assets/project-2/haneef-campusDock.jpeg",
+      },
+    ],
+    github: "https://github.com/Ritikkumar352/campusDock",
+    liveUrl: "https://campusdock.live",
+  },
+  {
+    id: 2,
     title: "AI-Powered mini CRM Platform",
     shortDescription:
       "A comprehensive CRM platform to manage customer relationships and data.",
@@ -160,10 +199,10 @@ export const projects = [
       },
     ],
     github: "https://github.com/Ritikkumar352/miniCrm",
-    liveUrl: "https://main.d3pha96ypv251i.amplifyapp.com/",
+    liveUrl: "https://crm-ritik.netlify.app",      // TODO : update the project with gemini API and neon db 
   },
   {
-    id: 2,
+    id: 3,
     title: "Vid-vault [cloud]",
     shortDescription: "A cloud-based video management application.",
     description: [
@@ -201,44 +240,7 @@ export const projects = [
     github: "https://github.com/Ritikkumar352/VidVault",
     liveUrl: "https://vidvault.me/",
   },
-  {
-    id: 3,
-    title: "Campus Dock Ongoing**",
-    shortDescription: "A one-stop smart utility app for college students.",
-    description: [
-      "Facilitates campus-specific services including canteen menus, order tracking, and notifications.",
-      "Integrated UPI payment for streamlined transactions during peak hours.",
-      "Email-based authentication to filter canteen availability by college.",
-    ],
-    technologies: [
-      "Kotlin",
-      "Spring Boot",
-      "PostgreSQL",
-      "Google Storage bucket",
-      "Firebase",
-      "TailwindCSS",
-    ],
-    thumbnail: "/assets/project-3/archit-campus-dock.png",
-    images: ["/assets/project-3/archit-campus-dock.png"],
-    architectureDiagrams: ["/assets/project-3/archit-campus-dock.png"],
-    dbDiagrams: [],
-    isTeamProject: true,
-    team: [
-      {
-        name: "Ritik",
-        role: personalInfo.role,
-        photo: personalInfo.photo,
-      },
-      {
-        name: "Sayed Haneef",
-        role: "Backend Developer, Android Developer",
-        photo: "/assets/project-2/haneef-campusDock.jpeg",
-      },
-    ],
-    // TODO add the link to the project
-    github: "https://github.com/alexjohnson/algo-trader-sim",
-    liveUrl: "https://algo-trader-sim.com",
-  },
+  
   {
     id: 4,
     title: "Real-Time Chat App, Ongoing**",
